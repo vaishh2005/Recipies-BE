@@ -9,7 +9,7 @@ const recipeRoutes = require('./routes/recipeRoutes')
 //import path from 'path'
 const {errorHandler} = require('./middleware/errorHandler')
 require('dotenv').config()
-const port = process.env.port || 4000
+const port = process.env.port || 3000
 connect()
 //const _dirname = path.resolve();
 app.use(cors())

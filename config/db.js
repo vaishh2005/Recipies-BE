@@ -9,15 +9,29 @@ async function connect() {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
-        console.log('Connected to MongoDB Atlas');
-
-        const users = await User.find(); // Retrieve all users, or adjust the query to match your needs
-        console.log('Users:', users.length);
-
-        console.log('Connected to MongoDB Atlas');
+        console.log('Connected to MongoDB Atlas Server');
     } catch (error) {
         console.log('Error connecting to database:', error);
     }
 }
 
 module.exports = connect;
+
+
+// const mongoose = require('mongoose');
+// const User = require('../model/User');  // Ensure correct User model path
+
+// async function connect() {
+//     try {
+//         // Connect to local MongoDB
+//         mongoose.connect('mongodb://localhost:27017/recipe')
+//         .then(() => console.log('Connected to Local MongoDB'))
+//         .catch((err) => console.error('Failed to connect to MongoDB', err));
+//         console.log('Connected to Local MongoDB');
+
+//     } catch (error) {
+//         console.log('Error connecting to database:', error);
+//     }
+// }
+
+// module.exports = connect;
